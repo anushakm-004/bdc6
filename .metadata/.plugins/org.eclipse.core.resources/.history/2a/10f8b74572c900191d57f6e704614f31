@@ -1,0 +1,32 @@
+package pack1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class test4 {
+	WebDriver driver;
+	
+	 @BeforeTest
+	 	
+	 public void configureBrowser() {
+		 driver = Drivers.configureDriver("chrome");
+		 driver.manage().window().maximize();
+		 driver.get("http://10.232.237.143:443/TestMeApp");
+		 	 }
+  @Test
+  public void testMethod() {
+	  driver.findElement(By.xpath("//input[@id='myInput']")).sendKeys("wear");
+	  driver.findElement(By.xpath("//div[@class='autocomplete-items'][3]")).click();
+	  driver.findElement(By.xpath("//input[@value='FIND DETAILS']")).click();
+	  
+  }
+  
+  @AfterTest
+  public void closeApp() {
+  	  driver.close();
+  }
+}
+  

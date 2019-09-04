@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite01">
+  <test name="TC001">
+    <classes>
+      <class name="day2_work.TestClass01">
+      <methods>
+     <include name="day2_work.TestClass01.tmethod1"></include>
+     <include name="day2_work.TestClass01.tmethod2"></include>
+     </methods>
+     </class>
+      </classes>
+      
+  </test> <!-- TC001 -->
+    <test name="TC002">
+    <classes>
+    <class name="day2_work.TestClass01"/>
+      <class name="day2_work.TestClass02"/>
+    </classes>
+  </test> <!-- TC002 -->
+</suite> <!-- Suite -->

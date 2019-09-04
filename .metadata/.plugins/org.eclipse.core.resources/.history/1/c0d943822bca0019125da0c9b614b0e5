@@ -1,0 +1,56 @@
+package pack3;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pack3.excel_utility1;
+
+
+public class Test1 {
+	
+	WebDriver driver;
+	
+	 @BeforeTest
+	 	
+	 public void configureBrowser() {
+		 driver = Drivers.configureDriver("chrome");
+		 driver.manage().window().maximize();
+		 driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
+	 }
+  @Test(priority=1, dataProvider="credentials")
+  public void testRegistration(String uname, String pwd,String fn,String ln, String conpw, String gend, String sec, String ans, CharSequence email,
+		  CharSequence[] mob, Object date, CharSequence addr ) {
+	  driver.findElement(By.xpath("//a[@href='RegisterUser.htm']")).click();  
+		driver.findElement(By.id("userName")).sendKeys(uname);
+		driver.findElement(By.id("firstName")).sendKeys(fn);
+		driver.findElement(By.id("lastName")).sendKeys(ln);
+		driver.findElement(By.id("password")).sendKeys(pwd);
+		driver.findElement(By.name("confirmPassword")).sendKeys(conpw);
+		Select gen = new Select(driver.findElement(By.name("gender")));
+		gen.selectByVisibleText(gend);
+		driver.findElement(By.name("emailAddress")).sendKeys(email);
+		driver.findElement(By.name("mobileNumber")).sendKeys(mob);
+		driver.findElement(By.name("dob")).sendKeys((CharSequence[]) date);
+		driver.findElement(By.id("address")).sendKeys(addr);
+		Select sq = new Select(driver.findElement(By.name("securityQuestion")));
+		sq.selectByVisibleText(sec);
+		driver.findElement(By.id("answer")).sendKeys(ans);
+		driver.findElement(By.name("Submit")).click();
+ }
+  
+  @DataProvider
+  public Object[][] credentials() throws IOException{
+  	return excel_utility1.readData();
+  }
+  @AfterTest
+  public void closeApp() {
+  	  driver.close();
+  }
+}

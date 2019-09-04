@@ -1,0 +1,13 @@
+Feature: BDC validation on demowebshop
+
+
+Background: check for the active internet 
+
+Scenario: open the website
+Given: the link of the website
+Then: open the website using the link
+
+Scenario: login to the website
+Given: the credentials are provided to login
+Then: click on login
+And: check for successful login

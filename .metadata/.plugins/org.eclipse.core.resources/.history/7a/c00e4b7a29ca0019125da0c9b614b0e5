@@ -1,0 +1,63 @@
+package pack3;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Test1 {
+	
+	WebDriver driver;
+	
+	 @BeforeTest
+	 	
+	 public void configureBrowser() {
+		 driver = Drivers.configureDriver("chrome");
+		 driver.manage().window().maximize();
+		 driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
+	 }
+  @Test(priority=1)
+  public void testRegistration() throws IOException {
+	  String uname = null,pwd = null,fn = null,ln = null,conpw = null,gend=null, sec=null, ans=null;
+	  driver.findElement(By.xpath("//a[@href='RegisterUser.htm']")).click();
+	  FileInputStream fis=new FileInputStream("C:\\Users\\anusha.k.m\\anusha\\excel\\test2.xlsx");
+	  XSSFWorkbook wb = new XSSFWorkbook(fis);
+	  XSSFSheet sheet1 = wb.getSheetAt(0);  
+		driver.findElement(By.id("userName")).sendKeys(uname);
+		driver.findElement(By.id("firstName")).sendKeys(fn);
+		driver.findElement(By.id("lastName")).sendKeys(ln);
+		driver.findElement(By.id("password")).sendKeys(pwd);
+		driver.findElement(By.name("confirmPassword")).sendKeys(conpw);
+		Select gen = new Select(driver.findElement(By.name("gender")));
+		gen.selectByVisibleText(gend);
+		CharSequence email = null;
+		driver.findElement(By.name("emailAddress")).sendKeys(email);
+		CharSequence mob = null;
+		driver.findElement(By.name("mobileNumber")).sendKeys(mob);
+		Object date = null;
+		driver.findElement(By.name("dob")).sendKeys((CharSequence[]) date);
+		CharSequence addr = null;
+		driver.findElement(By.id("address")).sendKeys(addr);
+		Select sq = new Select(driver.findElement(By.name("securityQuestion")));
+		sq.selectByVisibleText(sec);
+		driver.findElement(By.id("answer")).sendKeys(ans);
+		driver.findElement(By.name("Submit")).click();
+        
+	 
+	 
+	  
+  }
+  
+  @AfterTest
+  public void closeApp() {
+  	  driver.close();
+  }
+}

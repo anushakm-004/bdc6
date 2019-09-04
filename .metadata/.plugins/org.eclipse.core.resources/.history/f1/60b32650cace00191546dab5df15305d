@@ -1,0 +1,13 @@
+Feature: To login and shop in demowebshop
+
+Background: Launching of the website using correct url
+
+Scenario: Login through the website 
+Given Enter the required valid credentials
+Then Click on login
+
+Scenario: Selection of some product and adding it to the cart
+Given Select any product 
+Then Add the selected product to the cart
+And Goto to cart and see for the selected products and add or remove the products and update the cart
+

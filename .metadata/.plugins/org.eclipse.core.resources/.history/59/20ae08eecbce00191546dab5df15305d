@@ -1,0 +1,49 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+
+public class testcase {
+	WebDriver driver;
+	@Given("Launch using chrome browser")
+	public void launch_using_chrome_browser() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new cucumber.api.PendingException();
+		
+		driver = Drivers.configureDriver("chrome");
+		driver.manage().window().maximize();
+	}
+	
+	@Given("Enter the required valid credentials")
+	public void enter_the_required_valid_credentials() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new cucumber.api.PendingException();
+	}
+
+	@Then("Click on login")
+	public void click_on_login() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new cucumber.api.PendingException();
+	}
+
+	@Given("Select any product")
+	public void select_any_product() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new cucumber.api.PendingException();
+	}
+
+	@Then("Add the selected product to the cart")
+	public void add_the_selected_product_to_the_cart() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new cucumber.api.PendingException();
+	}
+
+	@Then("Goto to cart and see for the selected products and add or remove the products and update the cart")
+	public void goto_to_cart_and_see_for_the_selected_products_and_add_or_remove_the_products_and_update_the_cart() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new cucumber.api.PendingException();
+	}
+
+}

@@ -1,0 +1,29 @@
+package pack3;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+public class Test {
+	
+	WebDriver driver;
+	
+	 @BeforeTest
+	 	
+	 public void configureBrowser() {
+		 driver = Drivers.configureDriver("chrome");
+		 driver.manage().window().maximize();
+		 driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
+	 }
+  @Test(Priority=1)
+  public void testRegistration() {
+	  
+	 
+	  
+  }
+  
+  @AfterTest
+  public void closeApp() {
+  	  driver.close();
+  }
+}

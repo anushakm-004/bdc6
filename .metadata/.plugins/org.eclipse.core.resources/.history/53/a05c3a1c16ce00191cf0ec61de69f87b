@@ -1,0 +1,51 @@
+package package1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import package1.Drivers;
+
+public class test1 {
+
+	
+
+@Given("Application is launched by guest user")
+public void application_is_launched_by_guest_user() {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+	WebDriver driver;
+	 driver = Drivers.configureDriver("chrome");
+	 driver.manage().window().maximize();
+	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	 driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
+}
+
+@When("User clicks on sign In link available")
+public void user_clicks_on_sign_In_link_available() {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+@When("provides the required data in the form")
+public void provides_the_required_data_in_the_form() {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+@Then("user submits the data")
+public void user_submits_the_data() {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+@Then("verifies for the account creation")
+public void verifies_for_the_account_creation() {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+}

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20149" started-at="2019-08-30T11:08:06Z" finished-at="2019-08-30T11:08:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20149" started-at="2019-08-30T11:08:06Z" finished-at="2019-08-30T11:08:26Z">
+      <class name="pack3.ReportClass">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:pack3.ReportClass@343f4d3d]" name="startReport" is-config="true" duration-ms="7500" started-at="2019-08-30T11:08:06Z" finished-at="2019-08-30T11:08:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="FAIL" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:pack3.ReportClass@343f4d3d]" name="testRegistration" duration-ms="4050" started-at="2019-08-30T11:08:14Z" data-provider="credentials1" finished-at="2019-08-30T11:08:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Umadevi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Anusha]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[K M]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[anusha123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[anusha123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[anusha@gmail.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2147483647]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Sep]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1997]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[J H Patel Nagar, Shamanur, Davangere]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[What is your Birth Place?]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[dvg]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at pack3.ReportClass.testRegistration(ReportClass.java:104)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:pack3.ReportClass@343f4d3d]" name="getResult" is-config="true" duration-ms="883" started-at="2019-08-30T11:08:19Z" finished-at="2019-08-30T11:08:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRegistration status=FAILURE method=ReportClass.testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:pack3.ReportClass@343f4d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String)[pri:2, instance:pack3.ReportClass@343f4d3d]" name="testLogin" duration-ms="734" started-at="2019-08-30T11:08:19Z" data-provider="credentials" finished-at="2019-08-30T11:08:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Umadevi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[anusha123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="testCart()[pri:3, instance:pack3.ReportClass@343f4d3d]" name="testCart" duration-ms="1004" started-at="2019-08-30T11:08:20Z" finished-at="2019-08-30T11:08:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCart -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:pack3.ReportClass@343f4d3d]" name="getResult" is-config="true" duration-ms="0" started-at="2019-08-30T11:08:20Z" finished-at="2019-08-30T11:08:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=ReportClass.testLogin(java.lang.String, java.lang.String)[pri:2, instance:pack3.ReportClass@343f4d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:pack3.ReportClass@343f4d3d]" name="getResult" is-config="true" duration-ms="0" started-at="2019-08-30T11:08:21Z" finished-at="2019-08-30T11:08:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCart status=SUCCESS method=ReportClass.testCart()[pri:3, instance:pack3.ReportClass@343f4d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="testPayment()[pri:4, instance:pack3.ReportClass@343f4d3d]" name="testPayment" duration-ms="4906" started-at="2019-08-30T11:08:21Z" finished-at="2019-08-30T11:08:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPayment -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:pack3.ReportClass@343f4d3d]" name="getResult" is-config="true" duration-ms="3" started-at="2019-08-30T11:08:26Z" finished-at="2019-08-30T11:08:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPayment status=SUCCESS method=ReportClass.testPayment()[pri:4, instance:pack3.ReportClass@343f4d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:pack3.ReportClass@343f4d3d]" name="endReport" is-config="true" duration-ms="355" started-at="2019-08-30T11:08:26Z" finished-at="2019-08-30T11:08:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- pack3.ReportClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
